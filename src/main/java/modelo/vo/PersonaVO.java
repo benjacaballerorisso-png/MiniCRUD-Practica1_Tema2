@@ -3,16 +3,17 @@ package modelo.vo;
 public class PersonaVO {
     private int cod;
     private String nombre;
-    private double sueldo;
+    private String categoria;
     private String email;
 
     public PersonaVO() {
+
     }
 
-    public PersonaVO(int cod, String nombre, double sueldo, String email) {
+    public PersonaVO(int cod, String nombre, String categoria, String email) {
         this.cod = cod;
         this.nombre = nombre;
-        this.sueldo = sueldo;
+        this.categoria = categoria;
         this.email = email;
     }
 
@@ -32,25 +33,25 @@ public class PersonaVO {
         this.nombre = nombre;
     }
 
-    public double getSueldo() {
-        return sueldo;
+    public String getCategotia() {
+        return categoria;
     }
 
-    public void setSueldo(double sueldo) {
-        this.sueldo = sueldo;
+    public void setCategoria(String categoria) {
+        this.categoria = categoria;
     }
 
-    public String getEmail() {
+    public String getEmail(){
         return email;
     }
 
-    public void setEmail(String email) {
+    public void setEmail(String email){
         this.email = email;
     }
 
     @Override
     public String toString() {
-        return "PersonaVO{cod=" + cod + ", nombre=" + nombre
-                + ", sueldo=" + sueldo + ", email=" + email + '}';
+        return "PersonaVO{" + "cod=" + cod + ", nombre=" + nombre + ", categoria=" + categoria    + ", email=" + email + '}';
     }
+
 }
